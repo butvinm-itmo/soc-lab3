@@ -58,9 +58,9 @@ foreach variant $variants {
     puts "Running C synthesis for $sol_name..."
     csynth_design
 
-    # Run co-simulation
+    # Run co-simulation with waveform generation
     puts "Running co-simulation for $sol_name..."
-    cosim_design
+    cosim_design -trace_level all
 
     # Export design
     puts "Exporting design for $sol_name..."
@@ -76,11 +76,5 @@ puts "Synthesis reports are available at:"
 puts "  - ${project_name}_baseline/solution/syn/report/${top_function}_csynth.rpt"
 puts "  - ${project_name}_unroll/solution/syn/report/${top_function}_csynth.rpt"
 puts "  - ${project_name}_pipeline/solution/syn/report/${top_function}_csynth.rpt"
-puts ""
-puts "Compare metrics:"
-puts "  - Latency (cycles)"
-puts "  - Initiation Interval (II)"
-puts "  - Resource utilization (LUT, FF, DSP, BRAM)"
-puts "============================================"
 
 exit
