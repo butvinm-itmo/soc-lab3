@@ -53,7 +53,7 @@
 
 <div style="page-break-after: always;"></div>
 
-## Метрики: Baseline (без директив оптимизации)
+## Baseline (без директив оптимизации)
 
 ### Утилизация ресурсов FPGA
 
@@ -85,7 +85,9 @@
 
 <div style="page-break-after: always;"></div>
 
-## Метрики: Unrolled Loops (директива UNROLL)
+## Unrolled Loops (#pragma UNROLL)
+
+![unroll](./assets/unroll.png)
 
 ### Утилизация ресурсов FPGA
 
@@ -119,7 +121,9 @@
 
 <div style="page-break-after: always;"></div>
 
-## Метрики: Pipelined Loops (директива PIPELINE)
+## Pipelined Loops (#pragma PIPELINE)
+
+![pipeline](./assets/pipeline.png)
 
 ### Утилизация ресурсов FPGA
 
@@ -191,9 +195,9 @@
 </div>
 
 На диаграмме видно:
-- Фаза загрузки данных A и B через AXI-Lite (0-4 мкс)
-- Фаза вычисления (4-20 мкс) - сигнал ap_idle низкий
-- Фаза чтения результата C (после 10 мкс)
+- Фаза загрузки данных A и B через AXI-Lite (0-3 мкс)
+- Фаза вычисления (3-19 мкс)
+- Фаза чтения результата C через AXI-Lite (19 - 21 мкс)
 
 <div align="center">
 <img src="./assets/baseline-waveform-axi-write.png" alt="AXI Write Detail" width="1000">
@@ -202,7 +206,7 @@
 
 На детализированной диаграмме показаны AXI-Lite транзакции записи:
 - AWADDR - адреса записи (0x40, 0x44, 0x48... для матрицы A)
-- WDATA - данные (4 элемента матрицы упакованы в 32-битное слово)
+- WDATA - данные (4 элемента матрицы упакованы в 32-битное слово). Например, первое слово - `0x08080400` - соответствует первым элементам матрицы A
 - AWVALID/WVALID - сигналы валидности
 - AWREADY/WREADY - сигналы готовности
 
