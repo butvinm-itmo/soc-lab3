@@ -1,19 +1,19 @@
 ############################################################
-## HLS Automation Script for FIR Filter Variants
+## HLS Automation Script for Matrix Operations Variants
 ## Compares: Baseline, Unrolled, and Pipelined implementations
 ############################################################
 
 # Project settings
-set project_name "fir_comparison"
-set top_function "fir"
+set project_name "mat_comparison"
+set top_function "mat_compute"
 set part_name "xc7a100t-csg324-1"
 set clock_period 10
 
 # List of variants to synthesize
 set variants {
-    {baseline fir_baseline.c "No optimization"}
-    {unroll   fir_unroll.c   "Loop unrolling"}
-    {pipeline fir_pipeline.c "Loop pipelining"}
+    {baseline mat_baseline.c "No optimization"}
+    {unroll   mat_unroll.c   "Loop unrolling"}
+    {pipeline mat_pipeline.c "Loop pipelining"}
 }
 
 # Process each variant
@@ -38,7 +38,7 @@ foreach variant $variants {
 
     # Add source files (only this variant's implementation)
     add_files $src_file
-    add_files -tb fir_test.c -cflags "-Wno-unknown-pragmas"
+    add_files -tb mat_test.c -cflags "-Wno-unknown-pragmas"
     add_files -tb out.gold.dat
 
     # Set target device
@@ -73,9 +73,9 @@ puts "All variants processed successfully!"
 puts "============================================"
 puts ""
 puts "Synthesis reports are available at:"
-puts "  - ${project_name}_baseline/solution/syn/report/fir_csynth.rpt"
-puts "  - ${project_name}_unroll/solution/syn/report/fir_csynth.rpt"
-puts "  - ${project_name}_pipeline/solution/syn/report/fir_csynth.rpt"
+puts "  - ${project_name}_baseline/solution/syn/report/${top_function}_csynth.rpt"
+puts "  - ${project_name}_unroll/solution/syn/report/${top_function}_csynth.rpt"
+puts "  - ${project_name}_pipeline/solution/syn/report/${top_function}_csynth.rpt"
 puts ""
 puts "Compare metrics:"
 puts "  - Latency (cycles)"
