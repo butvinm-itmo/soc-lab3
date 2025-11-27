@@ -9,6 +9,11 @@ project_1/solution1
 project_1/.vivado_hls_log_all.xml
 vivado_hls.log
 
+# Test bench artifacts
+fir_comparison_baseline
+fir_comparison_pipeline
+fir_comparison_unroll
+
 # Compiled objects
 *.o
 *.exe
