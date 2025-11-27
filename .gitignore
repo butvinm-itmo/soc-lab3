@@ -1,0 +1,12 @@
+# Vivado HLS project files
+project_1/solution1
+project_1/.vivado_hls_log_all.xml
+vivado_hls.log
+
+# Compiled objects
+*.o
+*.exe
+
+# Test output files (except golden reference)
+*.dat
+!out.gold.dat
