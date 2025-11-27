@@ -13,6 +13,7 @@ vivado_hls.log
 mat_comparison_baseline
 mat_comparison_pipeline
 mat_comparison_unroll
+mat_comparison_partial_unroll
 
 # Compiled objects
 *.o

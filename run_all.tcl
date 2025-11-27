@@ -11,9 +11,10 @@ set clock_period 10
 
 # List of variants to synthesize
 set variants {
-    {baseline mat_baseline.c "No optimization"}
-    {unroll   mat_unroll.c   "Loop unrolling"}
-    {pipeline mat_pipeline.c "Loop pipelining"}
+    {baseline        mat_baseline.c        "No optimization"}
+    {unroll          mat_unroll.c          "Full loop unrolling"}
+    {partial_unroll  mat_partial_unroll.c  "Partial loop unrolling (factor=2)"}
+    {pipeline        mat_pipeline.c        "Loop pipelining"}
 }
 
 # Process each variant
@@ -75,6 +76,7 @@ puts ""
 puts "Synthesis reports are available at:"
 puts "  - ${project_name}_baseline/solution/syn/report/${top_function}_csynth.rpt"
 puts "  - ${project_name}_unroll/solution/syn/report/${top_function}_csynth.rpt"
+puts "  - ${project_name}_partial_unroll/solution/syn/report/${top_function}_csynth.rpt"
 puts "  - ${project_name}_pipeline/solution/syn/report/${top_function}_csynth.rpt"
 
 exit
