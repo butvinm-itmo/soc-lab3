@@ -1,5 +1,11 @@
 # Vivado HLS project files
 project_1/solution1
+!project_1/solution1/script.tcl
+!project_1/solution1/directives.tcl
+!project_1/solution1/solution1.aps
+!project_1/solution1/solution1.directive
+!project_1/solution1/impl/verilog
+
 project_1/.vivado_hls_log_all.xml
 vivado_hls.log
 
@@ -10,3 +16,5 @@ vivado_hls.log
 # Test output files (except golden reference)
 *.dat
 !out.gold.dat
+
+lab1
