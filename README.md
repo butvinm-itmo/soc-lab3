@@ -158,15 +158,11 @@
 | Loop 2 (i)     | 84      | 12                | 7          | No        |
 | Loop 2.1 (j)   | 10      | 3                 | 3\*        | No        |
 
-\*Trip Count = ceil(7/2) = 4, но HLS оптимизировал до 3 итераций + остаток
-
 ### Эффект Partial UNROLL
 
 - **Timing:** 9.332 ns < 10 ns target ✓ (в отличие от полного UNROLL с 11 ns)
 - **Ресурсы:** DSP=2 (в 2 раза меньше чем UNROLL=4)
 - **Latency:** 1374 cycles (между baseline=1598 и unroll=611)
-
-Partial UNROLL позволяет найти баланс: ускорение 1.16x при соблюдении timing constraints.
 
 <div style="page-break-after: always;"></div>
 

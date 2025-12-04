@@ -15,6 +15,7 @@ set variants {
     {unroll          mat_unroll.c          "Full loop unrolling"}
     {partial_unroll  mat_partial_unroll.c  "Partial loop unrolling (factor=2)"}
     {pipeline        mat_pipeline.c        "Loop pipelining"}
+    {fast            mat_fast.c            "Maximum optimization (array partition + pipeline + unroll)"}
 }
 
 # Process each variant
@@ -78,5 +79,6 @@ puts "  - ${project_name}_baseline/solution/syn/report/${top_function}_csynth.rp
 puts "  - ${project_name}_unroll/solution/syn/report/${top_function}_csynth.rpt"
 puts "  - ${project_name}_partial_unroll/solution/syn/report/${top_function}_csynth.rpt"
 puts "  - ${project_name}_pipeline/solution/syn/report/${top_function}_csynth.rpt"
+puts "  - ${project_name}_fast/solution/syn/report/${top_function}_csynth.rpt"
 
 exit

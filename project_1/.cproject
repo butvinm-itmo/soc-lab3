@@ -51,8 +51,6 @@
                                 								
                                 <option id="gnu.cpp.compiler.option.include.paths.1461052363" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/home/butvinm/Dev/ITMO/soc/lab3"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/butvinm/Dev/3rd-party/vivado/Vivado/2019.1/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/butvinm/Dev/3rd-party/vivado/Vivado/2019.1/include/ap_sysc"/>
@@ -86,8 +84,6 @@
                                 <option id="gnu.c.compiler.exe.debug.option.debugging.level.397357564" name="Debug Level" superClass="gnu.c.compiler.exe.debug.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.max" valueType="enumerated"/>
                                 								
                                 <option id="gnu.c.compiler.option.include.paths.1343227246" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/butvinm/Dev/ITMO/soc/lab3"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/butvinm/Dev/3rd-party/vivado/Vivado/2019.1/include"/>
                                     									
@@ -183,7 +179,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.c.compiler.option.misc.other.1203851735" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.c.compiler.option.misc.other.1203851735" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.97478212" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                             						
@@ -255,8 +251,6 @@
                                 								
                                 <option id="gnu.cpp.compiler.option.include.paths.2144927203" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
                                     									
-                                    <listOptionValue builtIn="false" value="/home/butvinm/Dev/ITMO/soc/lab3"/>
-                                    									
                                     <listOptionValue builtIn="false" value="/home/butvinm/Dev/3rd-party/vivado/Vivado/2019.1/include"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/butvinm/Dev/3rd-party/vivado/Vivado/2019.1/include/ap_sysc"/>
@@ -280,8 +274,6 @@
                                 <option id="gnu.c.compiler.exe.release.option.debugging.level.2065505238" name="Debug Level" superClass="gnu.c.compiler.exe.release.option.debugging.level" useByScannerDiscovery="false" value="gnu.c.debugging.level.none" valueType="enumerated"/>
                                 								
                                 <option id="gnu.c.compiler.option.include.paths.265527204" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" useByScannerDiscovery="false" valueType="includePath">
-                                    									
-                                    <listOptionValue builtIn="false" value="/home/butvinm/Dev/ITMO/soc/lab3"/>
                                     									
                                     <listOptionValue builtIn="false" value="/home/butvinm/Dev/3rd-party/vivado/Vivado/2019.1/include"/>
                                     									
@@ -367,7 +359,7 @@
                                 							
                             </option>
                             							
-                            <option id="gnu.c.compiler.option.misc.other.647163234" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-Wno-unknown-pragmas -c -fmessage-length=0" valueType="string"/>
+                            <option id="gnu.c.compiler.option.misc.other.647163234" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0" valueType="string"/>
                             							
                             <inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1700561781" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
                             						

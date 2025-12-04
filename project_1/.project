@@ -42,16 +42,6 @@
 			<location>/home/butvinm/Dev/ITMO/soc/lab3/project_1/solution1/.tcls</location>
 		</link>
 		<link>
-			<name>source/fir.c</name>
-			<type>1</type>
-			<location>/home/butvinm/Dev/ITMO/soc/lab3/fir.c</location>
-		</link>
-		<link>
-			<name>testbench/fir_test.c</name>
-			<type>1</type>
-			<location>/home/butvinm/Dev/ITMO/soc/lab3/fir_test.c</location>
-		</link>
-		<link>
 			<name>testbench/out.gold.dat</name>
 			<type>1</type>
 			<location>/home/butvinm/Dev/ITMO/soc/lab3/out.gold.dat</location>
